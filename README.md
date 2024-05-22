@@ -48,3 +48,46 @@ This project involves setting up a Virtual Private Cloud (VPC) on Amazon Web Ser
         
    - Configure the template with the necessary instance details (AMI ID, instance type, key pair, etc.).
    - Click on "Create launch template."
+
+---
+
+## Steps to Create an Auto Scaling Group
+
+1. **Create Auto Scaling Group:**
+   - Go back to the Auto Scaling Groups page.
+   - Click on "Create Auto Scaling Group."
+   - Select the launch template you created earlier.
+   - Click "Next."
+
+2. **Configure VPC and Subnets:**
+   - Add the VPC you created earlier.
+   - Select two private subnets for the auto-scaling group.
+   - Click "Next."
+
+        <p>
+        <img src="https://github.com/mayaworld13/aws_vpc_project/assets/127987256/bd9aaf1b-3e2c-4b10-bb99-e39bac8ea346" alt="AWS VPC Project Diagram" width="600" height="400" />
+        </p>
+        
+3. **Configure Load Balancer:**
+   - Select "No load balancer" for now.
+   - We will create an application load balancer separately in the public subnet but not for auto scaling group.
+   - Click "Next."
+
+4. **Set Capacity:**
+   - Set the desired, minimum, and maximum capacity for your auto-scaling group.
+   - Click "Next" until you reach the final step, then click "Create Auto Scaling Group."
+  
+        <p>
+        <img src="https://github.com/mayaworld13/aws_vpc_project/assets/127987256/23508449-c89f-4d50-88df-1478228f9a90" alt="AWS VPC Project Diagram" width="600" height="400" />
+        </p>
+
+5. **Verify Auto Scaling Group:**
+   - Ensure the instances are launched with private IPs.
+  
+        <p>
+        <img src="https://github.com/mayaworld13/aws_vpc_project/assets/127987256/db72010e-ada6-47d8-aefe-910674caae68" alt="AWS VPC Project Diagram"  />
+        </p>
+
+An auto-scaling group has been created. Before creating the application load balancer, we need to install the application on the servers. To install the application on the servers, we need to log in to them, but they do not have public IPs. To log in to these servers, we need to launch a bastion host (instance) using the same VPC and key pair, with a public subnet. Additionally, we need to transfer this key to the instance.
+
+---
