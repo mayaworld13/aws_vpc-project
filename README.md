@@ -119,3 +119,46 @@ An auto-scaling group has been created. Before creating the application load bal
         </p>
 
 ---
+
+## Steps to Create a Target Group
+
+1. **Navigate to Target Groups:**
+   - Open the EC2 console.
+   - Click on "Target Groups" under the "Load Balancing" section on the left panel.
+
+2. **Create Target Group:**
+   - Click on "Create target group."
+   - Choose "Instances" as the target type.
+   - Enter a name for your target group.
+   - Select the VPC where your instances are running.
+   - Choose the protocol and port for routing traffic to the targets (e.g., my application is running on  port 8000).
+   - Click "Next."
+
+3. **Configure Health Checks:**
+   - Configure the health check settings.
+   - Set the protocol and path for health checks (e.g., HTTP and /).
+   - Adjust the advanced health check settings if needed (e.g., healthy threshold, unhealthy threshold, timeout, interval).
+
+4. **Register Targets:**
+   - Select the instances you want to include in this target group.
+   - Click "Include as pending below" to add the instances.
+   - Click "Create target group."
+
+
+        <p>
+        <img src="https://github.com/mayaworld13/aws_vpc-project/assets/127987256/f962990a-1e11-4de0-8411-e2dbbba8648e" alt="AWS VPC Project Diagram"  />
+        </p>
+
+5. **Verify Target Group:**
+   - Ensure that your instances are showing as healthy in the target group.
+
+
+        <p>
+        <img src="https://github.com/mayaworld13/aws_vpc-project/assets/127987256/f91d094c-194c-43ba-849f-f4904e6bcd0b" alt="AWS VPC Project Diagram" width="800" height="400" />
+        </p>
+
+---
+
+
+
+
