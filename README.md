@@ -91,3 +91,31 @@ This project involves setting up a Virtual Private Cloud (VPC) on Amazon Web Ser
 An auto-scaling group has been created. Before creating the application load balancer, we need to install the application on the servers. To install the application on the servers, we need to log in to them, but they do not have public IPs. To log in to these servers, we need to launch a bastion host (instance) using the same VPC and key pair, with a public subnet. Additionally, we need to transfer this key to the instance.
 
 ---
+
+## Steps to Set Up Bastion Host
+
+1. **Launch Bastion Host:**
+   - Launch an EC2 instance in the same VPC with a public subnet.
+   - Use the same key pair.
+
+2. **Transfer Key to Bastion Host:**
+   - Use the following command to transfer the key to the bastion instance:
+     ```sh
+     scp -i your-key.pem your-key.pem ubuntu@<Bastion-Host-Public-IP>:/home/ubuntu
+     ```
+
+       <p>
+        <img src="https://github.com/mayaworld13/aws_vpc-project/assets/127987256/1408fc94-dd0b-4e58-97d3-917f9114419b" alt="AWS VPC Project Diagram"  />
+        </p>
+
+
+3. **Login to Private Instances:**
+   - SSH into the bastion host.
+   - From the bastion host, SSH into the private subnet instances using the transferred key.
+
+
+        <p>
+        <img src="https://github.com/mayaworld13/aws_vpc-project/assets/127987256/8785bb92-4de0-4367-9d9e-f71a4619203f" alt="AWS VPC Project Diagram" width="600" height="400" />
+        </p>
+
+---
