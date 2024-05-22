@@ -177,6 +177,24 @@ An auto-scaling group has been created. Before creating the application load bal
 
 ---
 
+## Associate Target Group with Load Balancer
+
+1. **Navigate to Load Balancer Creation:**
+   - Open the EC2 console.
+   - Click on "Load Balancers" on the left panel.
+
+2. **Create Application Load Balancer:**
+   - Click on "Create Load Balancer."
+   - Select "Application Load Balancer."
+   - Configure it to be in the public subnet in same VPC.
+   - Add the necessary listener and target group configurations.
+   - Complete the setup.
 
 
+        <p>
+        <img src="https://github.com/mayaworld13/aws_vpc-project/assets/127987256/0f848a4e-21b1-44cb-af5c-02f62cf83a84" alt="AWS VPC Project Diagram" width="800" height="400" />
+        </p>
 
+    - if the listner port is not allowed then add in the security section of load balancer
+
+---
