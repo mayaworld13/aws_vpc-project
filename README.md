@@ -117,6 +117,24 @@ An auto-scaling group has been created. Before creating the application load bal
         <p>
         <img src="https://github.com/mayaworld13/aws_vpc-project/assets/127987256/8785bb92-4de0-4367-9d9e-f71a4619203f" alt="AWS VPC Project Diagram" width="600" height="400" />
         </p>
+        
+   - lets make the html page  which contain ip and hi hello in first private subnet
+     
+        <p>
+        <img src="https://github.com/mayaworld13/aws_vpc-project/assets/127987256/877de78b-d4c4-4794-b28d-baefb8eb121b" alt="AWS VPC Project Diagram"  />
+        </p>
+  
+   - lets make another html page for another private subnet
+
+        <p>
+        <img src="https://github.com/mayaworld13/aws_vpc-project/assets/127987256/c5963d3b-c1c7-49ba-b86b-61d4a5bc1584" alt="AWS VPC Project Diagram"  />
+        </p>
+
+   - run the application on port 8000 using this command
+
+     ```bash
+     python3 -m http.server 8000
+     ```
 
 ---
 
