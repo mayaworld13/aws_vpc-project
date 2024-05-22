@@ -198,3 +198,13 @@ An auto-scaling group has been created. Before creating the application load bal
     - if the listner port is not allowed then add in the security section of load balancer
 
 ---
+
+## Test of Project
+
+ - copy the dns of Load balancer browse it and let see what happens
+
+   ![image](https://github.com/mayaworld13/aws_vpc-project/assets/127987256/173367ef-c9d1-4f11-99db-f57d8b33e471)
+
+   ![image](https://github.com/mayaworld13/aws_vpc-project/assets/127987256/af440223-05dd-459c-9021-3d88ba0b6d21)
+
+
