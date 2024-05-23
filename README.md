@@ -29,23 +29,23 @@ This project involves setting up a Virtual Private Cloud (VPC) on Amazon Web Ser
    - Open the EC2 console.
    - Click on "Auto Scaling Groups" on the left panel.
 
-        <p>
+      <!--  <p>
         <img src="https://github.com/mayaworld13/aws_vpc_project/assets/127987256/f31903a7-5f85-4908-a4ba-b38582869265" alt="AWS VPC Project Diagram" width="600" height="400" />
-        </p>
+        </p> -->
 
 2. **Create Launch Template:**
    - Click on "Create launch template."
    - Provide a name and description for your template.
   
-        <p>
+        <!--<p>
         <img src="https://github.com/mayaworld13/aws_vpc_project/assets/127987256/24944d32-6169-40fc-a7aa-66accfbc63ba" alt="AWS VPC Project Diagram" width="600" height="400" />
-        </p>
+        </p>  -->
         
    - Create a new security group within the same VPC.
   
-        <p>
+       <!-- <p>
         <img src="https://github.com/mayaworld13/aws_vpc_project/assets/127987256/2a0ac662-e91f-4aa8-a4d7-8d3b4662e18e" alt="AWS VPC Project Diagram" width="600" height="400" />
-        </p>
+        </p>  -->
         
    - Configure the template with the necessary instance details (AMI ID, instance type, key pair, etc.).
    - Click on "Create launch template."
@@ -65,9 +65,9 @@ This project involves setting up a Virtual Private Cloud (VPC) on Amazon Web Ser
    - Select two private subnets for the auto-scaling group.
    - Click "Next."
 
-        <p>
+       <!-- <p>
         <img src="https://github.com/mayaworld13/aws_vpc_project/assets/127987256/bd9aaf1b-3e2c-4b10-bb99-e39bac8ea346" alt="AWS VPC Project Diagram" width="600" height="400" />
-        </p>
+        </p>  -->
         
 3. **Configure Load Balancer:**
    - Select "No load balancer" for now.
@@ -78,16 +78,16 @@ This project involves setting up a Virtual Private Cloud (VPC) on Amazon Web Ser
    - Set the desired, minimum, and maximum capacity for your auto-scaling group.
    - Click "Next" until you reach the final step, then click "Create Auto Scaling Group."
   
-        <p>
+       <!-- <p>
         <img src="https://github.com/mayaworld13/aws_vpc_project/assets/127987256/23508449-c89f-4d50-88df-1478228f9a90" alt="AWS VPC Project Diagram" width="600" height="400" />
-        </p>
+        </p>  -->
 
 5. **Verify Auto Scaling Group:**
    - Ensure the instances are launched with private IPs.
   
-        <p>
+       <!-- <p>
         <img src="https://github.com/mayaworld13/aws_vpc_project/assets/127987256/db72010e-ada6-47d8-aefe-910674caae68" alt="AWS VPC Project Diagram"  />
-        </p>
+        </p>  -->
 
 An auto-scaling group has been created. Before creating the application load balancer, we need to install the application on the servers. To install the application on the servers, we need to log in to them, but they do not have public IPs. To log in to these servers, we need to launch a bastion host (instance) using the same VPC and key pair, with a public subnet. Additionally, we need to transfer this key to the instance.
 
