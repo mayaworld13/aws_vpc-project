@@ -12,7 +12,7 @@ This project involves setting up a Virtual Private Cloud (VPC) on Amazon Web Ser
 
 ## Steps to Create the VPC
 
-1. **Navigate to VPC Creation:**
+1. **Navigate to VPC Creation :**
    - Open the AWS Management Console.
    - Click on "VPC and more."
 
